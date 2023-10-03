@@ -38,6 +38,7 @@ struct ToasterAlmighty {
 struct Toaster {
   FontType Font;
   eToastColor BackgroundColor;
+  float Duration;
   import void Toast(const string sliced_bread);
   
   import void UtilSetRandomColor();
