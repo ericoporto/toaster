@@ -62,7 +62,8 @@ enum eToastTweenEasingType {
   eToastEaseInOutElasticTween,
   eToastEaseInBounceTween,
   eToastEaseOutBounceTween,
-  eToastEaseInOutBounceTween
+  eToastEaseInOutBounceTween, 
+  eToastEaseMAX
 };
 
 struct ToasterAlmighty {
@@ -70,6 +71,7 @@ struct ToasterAlmighty {
 };
 
 struct Toaster {
+  TextWindowGUI* TextWindowGUI;
   FontType Font;
   eToastColor BackgroundColor;
   eToastTweenEasingType SlideInEasing;
