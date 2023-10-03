@@ -1,7 +1,7 @@
 // new module header
 
 #ifndef MAX_TOAST
-#define MAX_TOAST 8
+#define MAX_TOAST 16
 #endif
 
 enum eToastColor {
@@ -39,4 +39,6 @@ struct Toaster {
   FontType Font;
   eToastColor BackgroundColor;
   import void Toast(const string sliced_bread);
+  
+  import void UtilSetRandomColor();
 };
