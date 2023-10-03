@@ -31,6 +31,40 @@ enum eToastColor {
   eToastColor_MidnightBlack = 12680,  
 };
 
+enum eToastTweenEasingType {
+  eToastEaseLinearTween,
+  eToastEaseInSineTween,
+  eToastEaseOutSineTween,
+  eToastEaseInOutSineTween,
+  eToastEaseInQuadTween,
+  eToastEaseOutQuadTween,
+  eToastEaseInOutQuadTween,
+  eToastEaseInCubicTween,
+  eToastEaseOutCubicTween,
+  eToastEaseInOutCubicTween,
+  eToastEaseInQuartTween,
+  eToastEaseOutQuartTween,
+  eToastEaseInOutQuartTween,
+  eToastEaseInQuintTween,
+  eToastEaseOutQuintTween,
+  eToastEaseInOutQuintTween,
+  eToastEaseInCircTween,
+  eToastEaseOutCircTween,
+  eToastEaseInOutCircTween,
+  eToastEaseInExpoTween,
+  eToastEaseOutExpoTween,
+  eToastEaseInOutExpoTween,
+  eToastEaseInBackTween,
+  eToastEaseOutBackTween,
+  eToastEaseInOutBackTween,
+  eToastEaseInElasticTween,
+  eToastEaseOutElasticTween,
+  eToastEaseInOutElasticTween,
+  eToastEaseInBounceTween,
+  eToastEaseOutBounceTween,
+  eToastEaseInOutBounceTween
+};
+
 struct ToasterAlmighty {
   import static attribute int GameSpeed;
 };
@@ -38,6 +72,8 @@ struct ToasterAlmighty {
 struct Toaster {
   FontType Font;
   eToastColor BackgroundColor;
+  eToastTweenEasingType SlideInEasing;
+  eToastTweenEasingType SlideOutEasing;
   float Duration;
   import void Toast(const string sliced_bread);
   
