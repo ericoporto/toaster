@@ -1,0 +1,1 @@
+var gamefiles = ['toaster_demo.ags', 'acsetup.cfg'];
