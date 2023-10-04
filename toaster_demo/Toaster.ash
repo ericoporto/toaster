@@ -6,6 +6,12 @@
 // Uses easing code based on Edmundo Ruiz and Robert Penner's, works, 
 // which are MIT and BSD licensed, respectively.
 
+enum eToastAlignement {
+  eToastAlignRight = eAlignRight, 
+  eToastAlignLeft = eAlignLeft, 
+  eToastAlignCenter = eAlignCenter
+};
+
 enum eToastColor {
   eToastColor_None = COLOR_TRANSPARENT, 
   eToastColor_PaleLemon = 65527,
@@ -86,7 +92,7 @@ struct Toaster {
   /// The easing to use when moving the toast out of existence
   eToastTweenEasingType SlideOutEasing;
   /// From where to position the toasts
-  HorizontalAlignment OriginAlignment;
+  eToastAlignement OriginAlignment;
   /// How long in seconds should the Toast be on-screen
   float Duration;
   /// Rotation in degrees for produced toasts
