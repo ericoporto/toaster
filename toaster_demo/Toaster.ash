@@ -85,6 +85,8 @@ struct Toaster {
   eToastTweenEasingType SlideInEasing;
   /// The easing to use when moving the toast out of existence
   eToastTweenEasingType SlideOutEasing;
+  /// From where to position the toasts
+  HorizontalAlignment OriginAlignment;
   /// How long in seconds should the Toast be on-screen
   float Duration;
   /// Rotation in degrees for produced toasts
