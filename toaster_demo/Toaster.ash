@@ -1,6 +1,6 @@
 // Toaster Module Header
 //
-// Version 0.1.0
+// Version 0.1.1
 //
 // Toaster module is open source under the MIT License.
 // Uses easing code based on Edmundo Ruiz and Robert Penner's, works, 

@@ -4718,7 +4718,7 @@
                 <Name>Toaster</Name>
                 <Description>A Toaster to produce toasts.</Description>
                 <Author>eri0o</Author>
-                <Version>0.1.0</Version>
+                <Version>0.1.1</Version>
                 <Key>1950276108</Key>
                 <IsHeader>False</IsHeader>
               </Script>
