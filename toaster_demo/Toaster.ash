@@ -1,10 +1,13 @@
-// new module header
-
-#ifndef MAX_TOAST
-#define MAX_TOAST 16
-#endif
+// Toaster Module Header
+//
+// Version 0.1.0
+//
+// Toaster module is open source under the MIT License.
+// Uses easing code based on Edmundo Ruiz and Robert Penner's, works, 
+// which are MIT and BSD licensed, respectively.
 
 enum eToastColor {
+  eToastColor_None = COLOR_TRANSPARENT, 
   eToastColor_PaleLemon = 65527,
   eToastColor_DarkPlum = 12582,
   eToastColor_DeepBurgundy = 20906,
@@ -67,17 +70,51 @@ enum eToastTweenEasingType {
 };
 
 struct ToasterAlmighty {
+  /// Sets the GameSpeed (frames per second) to be assumed in Toaster calculations
   import static attribute int GameSpeed;
 };
 
 struct Toaster {
-  TextWindowGUI* TextWindowGUI;
-  FontType Font;
+  /// Background color of the toast
   eToastColor BackgroundColor;
+  /// If the toast must be in a text box, set a TextWindowGUI
+  TextWindowGUI* TextWindowGUI;
+  /// Font to write text on Toast
+  FontType Font;  
+  /// The easing to use when moving the toast into screen
   eToastTweenEasingType SlideInEasing;
+  /// The easing to use when moving the toast out of existence
   eToastTweenEasingType SlideOutEasing;
+  /// How long in seconds should the Toast be on-screen
   float Duration;
+  /// Rotation in degrees for produced toasts
+  float Rotation;
+  /// Produces a toast from a message!
   import void Toast(const string sliced_bread);
-  
-  import void UtilSetRandomColor();
+  /// Just to set the toast background a random cool color from the pre-made palette
+  import void SetRandomColor();
+  /// Just to set a random cool angle
+  import void SetRandomSmallRotation();
 };
+
+// MIT License
+// 
+// Copyright (c) 2023 Érico Vieira Porto 
+// 
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+// 
+// The above copyright notice and this permission notice shall be included in all
+// copies or substantial portions of the Software.
+// 
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
