@@ -1,6 +1,6 @@
 // Toaster Module Header
 //
-// Version 0.1.1
+// Version 0.1.2
 //
 // Toaster module is open source under the MIT License.
 // Uses easing code based on Edmundo Ruiz and Robert Penner's, works, 
@@ -81,6 +81,8 @@ struct ToasterAlmighty {
 };
 
 struct Toaster {
+  /// A sprite to be used as icon
+  int Icon;
   /// Background color of the toast
   eToastColor BackgroundColor;
   /// If the toast must be in a text box, set a TextWindowGUI
